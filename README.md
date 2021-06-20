@@ -1,2 +1,2 @@
-# TaskBoard
-Proyecto final Programación Web donde se administran tareas de un Sprint para un equipo de desarrollo
+#Team Task Board
+App to have a control of tasks needed to complete on a Sprint

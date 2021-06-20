@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Team Task Board</title>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+        <script src="func.js"></script>
+        <style>
+        h1
+        {
+            z-index: 2;
+            position: absolute;
+            top: 2%;
+            left: 36%;
+            color: rgb(253, 209, 13);
+            font-family: Consolas, monaco, monospace;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.32);
+            font-stretch: expanded;
+            font-size: 60px;
+        }
+        h2 
+        {
+            font: 400 40px/1 'Tahoma', Helvetica, sans-serif;
+            color: #e4e4e4;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input[type=email],  input[type=password]
+        {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            color: black;
+            padding: 14px 20px;
+            display: block;
+            margin: 5px;
+            position: relative;
+            border: none;
+            border-radius: 4px;
+        }
+        .bg-text 
+        {
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.1);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 30%;
+            padding: 15px;
+            text-align: center;
+        }
+        .button 
+        {
+            width: 45%;
+            display: inline-block;
+            margin: 5px;
+            position: relative;
+            padding: 14px 20px;
+            background-color: #d8800c;  
+            border: 2px solid #d8800c;
+            border-radius: 4px;
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .bg-image 
+        {
+            background-image: url("bg.jpg");
+            filter: blur(1px);
+            -webkit-filter: blur(1px);
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Team Board</h1>
+        <div class="bg-image"></div>
+        <div class="bg-text">
+            <h2>Login/Register here</h2>
+            <input type="email" placeholder="Email" id="email"/>
+            <input type="password" placeholder="Password" id="password"/><br>
+            <button class="button" onclick="signUp()" id="signUp"> Sign Up </button>
+            <button class="button" onclick="signIn()" id="signIn"> Sign In </button>
+        </div>
+    </body>
+</html>
