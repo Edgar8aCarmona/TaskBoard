@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+
+		<title>Team Task Board</title>
+        <!--<script src="func.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+	</head>
+
+	<body>
+
+    
+		<header>
+			<h1>Sprint Board</h1>
+        </header>
+        
+
+        <div class="content">
+
+            <form id="add-task-form">
+                <input type="text" name="task" placeholder="Add task">
+                <button>Add Task</button>
+            </form>
+
+            <ul id="task-list"></ul>
+        </div>
+        
+        <script>
+        var firebaseConfig = {
+                apiKey: "AIzaSyAiKoCgJFVlPCT5tzG5X3g5kMqIJskNaz4",
+                authDomain: "todo-list-progweb.firebaseapp.com",
+                projectId: "todo-list-progweb",
+                storageBucket: "todo-list-progweb.appspot.com",
+                messagingSenderId: "520686097230",
+                appId: "1:520686097230:web:83ff6e0bf2d1aa4461041f",
+                measurementId: "G-3XQ2SYJXVT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        
+        db.settings({ timestampsInSnapshots: true }); 
+
+        </script>
+
+		<script src="app.js" charset="utf-8"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <div id="formContainer">
+            <button onclick="signOut()" id="signOut"> Log Out </button><br>  
+        </div>
+	</body>
+</html>
